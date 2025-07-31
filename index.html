@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licitalerta - Notificações Inteligentes de Licitações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { scroll-behavior: smooth; }
+    .hero {
+      background: linear-gradient(to right, #002c5f, #0066cc);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .section { padding: 60px 0; }
+    .bg-primary-light { background-color: #e9f0fb; }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+
+  <!-- Clerk SDK (corrigido) -->
+  <script>
+    window.ClerkFrontendApi = "beloved-raptor-9.clerk.accounts.dev";
+  </script>
+  <script async crossorigin src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js" onload="
+    window.Clerk.mountSignUpButton('#clerk-sign-up-button');
+    window.Clerk.mountSignInButton('#clerk-sign-in-button');
+  "></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="logo-licitalerta.png" alt="Logo Licitalerta" style="height: 70px; margin-right: 40px;">
+  <span class="fw-bold text-primary">LICITALERTA</span>
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teste">Quero Testar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1 class="display-4">Não perca mais nenhuma licitação pública</h1>
+      <p class="lead">Uma plataforma inteligente feita para pequenas empresas acompanharem oportunidades no Compras.gov.br</p>
+      <a href="#teste" class="btn btn-light btn-lg mt-3">Quero testar gratuitamente</a>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre o Projeto</h2>
+      <p class="text-center">O <strong>Licitalerta</strong> nasceu para facilitar o acesso de pequenas empresas às licitações públicas...</p>
+    </div>
+  </section>
+
+  <section class="section bg-primary-light" id="funcionalidades">
+    <div class="container">
+      <h2 class="text-center mb-5">Funcionalidades</h2>
+      <div class="row text-center">
+        <div class="col-md-3"><h5>Alertas Automatizados</h5><p>Receba notificações por e-mail com licitações do seu interesse.</p></div>
+        <div class="col-md-3"><h5>Filtro por Categoria</h5><p>Selecione materiais ou palavras-chave e receba somente o que importa.</p></div>
+        <div class="col-md-3"><h5>Interface Simples</h5><p>Plataforma leve, responsiva e fácil de usar em qualquer dispositivo.</p></div>
+        <div class="col-md-3"><h5>Monitoramento Diário</h5><p>Busca contínua por novas licitações nos principais portais públicos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="beneficios">
+    <div class="container">
+      <h2 class="text-center mb-5">Benefícios para sua empresa</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li>Ganhe tempo com notificações automáticas</li>
+            <li>Não perca mais oportunidades de venda</li>
+            <li>Foque no que importa: enviar propostas e fechar contratos</li>
+            <li>Evite depender de mensagens aleatórias ou sorte</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="planos">
+    <div class="container">
+      <h2 class="text-center mb-5">Escolha o plano ideal para sua empresa</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-secondary text-white">Básico</div>
+            <div class="card-body">
+              <h3 class="card-title">R$ 49/mês</h3>
+              <p class="card-text">✔ 1 categoria monitorada<br>✔ Notificações por e-mail</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-primary text-white">Pro</div>
+            <div class="card-body">
+              <h3 class="card-title">R$ 89/mês</h3>
+              <p class="card-text">✔ Até 5 categorias<br>✔ E-mail e suporte prioritário</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header bg-dark text-white">Premium</div>
+            <div class="card-body">
+              <h3 class="card-title">R$ 149/mês</h3>
+              <p class="card-text">✔ Categorias ilimitadas<br>✔ E-mail e suporte prioritário</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-primary-light" id="teste">
+    <div class="container">
+      <h2 class="text-center mb-4">Crie sua conta gratuita</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <div id="clerk-sign-up-button">
+            <button class="btn btn-primary">Criar Conta</button>
+          </div>
+          <br/>
+          <div id="clerk-sign-in-button">
+            <button class="btn btn-outline-primary mt-2">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Licitalerta - Notificações Inteligentes para Licitações</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
