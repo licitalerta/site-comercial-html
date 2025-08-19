@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licitalerta - Notificações Inteligentes de Licitações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { 
+      scroll-behavior: smooth; 
+    }
+    html {
+      scroll-padding-top: 80px; /* altura da navbar */
+    }
+    .hero {
+      background: linear-gradient(to right, #002c5f, #0066cc);
+      color: white;
+      padding: 80px 15px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('logo-licitalerta.png');
+      background-repeat: repeat;
+      background-size: 200px;
+      opacity: 0.25;
+      z-index: 0;
+    }
+    .hero > .container {
+      position: relative;
+      z-index: 2;
+    }
+    .section { padding: 60px 15px; }
+    .bg-primary-light { background-color: #e9f0fb; }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* diminuir a altura da navbar */
+    .navbar-brand img {
+      height: 40px; 
+    }
+    .navbar {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+    /* animação dos links do menu */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #0066cc;
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    @media (max-width: 576px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+      .btn { width: 100%; margin-bottom: 10px; }
+      .navbar-brand img { height: 32px; } /* logo menor no mobile */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo-licitalerta.png" alt="Logo Licitalerta" style="margin-right: 15px;">
+        <span class="fw-bold text-primary">LICITALERTA</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formulario">Quero Testar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Não perca mais nenhuma licitação pública</h1>
+      <p class="lead">Uma plataforma inteligente feita para pequenas empresas acompanharem oportunidades no Compras.gov.br</p>
+      <a href="#formulario" class="btn btn-light btn-lg mt-3">Quero testar gratuitamente</a>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre o Projeto</h2>
+      <p class="text-center">O <strong>Licitalerta</strong> nasceu para facilitar o acesso de pequenas empresas às licitações públicas...</p>
+    </div>
+  </section>
+
+  <section class="section bg-primary-light" id="funcionalidades">
+    <div class="container">
+      <h2 class="text-center mb-5">Funcionalidades</h2>
+      <div class="row text-center g-4">
+        <div class="col-12 col-md-3"><h5>Alertas Automatizados</h5><p>Receba notificações por e-mail com licitações do seu interesse.</p></div>
+        <div class="col-12 col-md-3"><h5>Filtro por Categoria</h5><p>Selecione materiais ou palavras-chave e receba somente o que importa.</p></div>
+        <div class="col-12 col-md-3"><h5>Interface Simples</h5><p>Plataforma leve, responsiva e fácil de usar em qualquer dispositivo.</p></div>
+        <div class="col-12 col-md-3"><h5>Monitoramento Diário</h5><p>Busca contínua por novas licitações nos principais portais públicos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="beneficios">
+    <div class="container">
+      <h2 class="text-center mb-5">Benefícios para sua empresa</h2>
+      <ul class="list-unstyled text-center text-md-start">
+        <li>✔ Ganhe tempo com notificações automáticas</li>
+        <li>✔ Não perca mais oportunidades de venda</li>
+        <li>✔ Foque no que importa: enviar propostas e fechar contratos</li>
+        <li>✔ Evite depender de mensagens aleatórias ou sorte</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="planos">
+    <div class="container">
+      <h2 class="text-center mb-5">Escolha o plano ideal para sua empresa</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card text-center h-100">
+            <div class="card-header bg-secondary text-white">Básico</div>
+            <div class="card-body">
+              <p>✔ 1 categoria monitorada<br>✔ Notificações por e-mail</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card text-center h-100">
+            <div class="card-header bg-primary text-white">Pro</div>
+            <div class="card-body">
+              <p>✔ Até 5 categorias<br>✔ E-mail e suporte prioritário</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card text-center h-100">
+            <div class="card-header bg-dark text-white">Premium</div>
+            <div class="card-body">
+              <p>✔ Categorias ilimitadas<br>✔ E-mail e suporte prioritário</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="formulario">
+    <div class="container">
+      <h2 class="text-center mb-4">Formulário de Contato</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeG5ruDO7w60shqkFqkMgR28fKsy5whPVOY_VL763GbcsYiw/viewform?embedded=true" 
+              width="100%" height="800" style="max-width: 100%;" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="container text-center">
+      <h2 class="mb-4">Contato</h2>
+      <p>📧 Entre em contato: <a href="mailto:licitalerta.pampatec@gmail.com">licitalerta.pampatec@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Licitalerta - Notificações Inteligentes para Licitações</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
